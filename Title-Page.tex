@@ -1,0 +1,114 @@
+\documentclass[../../../main.tex]{subfiles}
+
+\graphicspath{
+	{"pics/"}
+	{"chapters/0-Prologue/1-Title-Page/pics/"}
+}
+
+\begin{document}
+	
+	\newcommand{\thesisauthor}{Lukas Hunold}
+	\newcommand{\thesistopic}{Controlled creation of Silicon Vacancy color centers in diamond by local ion implantation}
+	\newcommand{\thesisentopic}{Controlled creation of Silicon Vacancy color centers in diamond by local ion implantation}
+	\newcommand{\thesisinstitute}{Laboratory of Nano-Optics}
+	\newcommand{\thesisreviewerone}{Prof. Dr. Mario Agio}
+	\newcommand{\thesisreviewertwo}{PD Dr. rer. nat. Michael Johanning}
+	\newcommand{\thesisadvisorone}{Dr. Assegid M. Flatae}
+	\newcommand{\thesistimestart}{01.01.2020}
+	\newcommand{\thesistimeend}{01.01.2021}
+	\newcommand{\thesistimehandin}{01.01.2021}
+	\newcommand{\thesispagehead}{Master Thesis: \thesisentopic}
+	
+	% coordinates for background border
+	\newcommand{\diameter}{20}
+	\newcommand{\xone}{-15}
+	\newcommand{\xtwo}{160}
+	\newcommand{\yone}{15}
+	\newcommand{\ytwo}{-253}
+	
+	\begin{titlepage}
+		% background border
+		\begin{tikzpicture}[overlay]
+		\draw[color=gray]
+		(\xone mm, \yone mm)
+		-- (\xtwo mm, \yone mm)
+		arc (90:0:\diameter pt)
+		-- (\xtwo mm + \diameter pt , \ytwo mm)
+		-- (\xone mm + \diameter pt , \ytwo mm)
+		arc (270:180:\diameter pt)
+		-- (\xone mm, \yone mm);
+		\end{tikzpicture}
+		
+		% KIT image and sign for faculty of physics
+		\begin{textblock}{10}[0,0](4,2.63)
+			\includegraphics[width=.36\textwidth]{unilogo.png}
+		\end{textblock}
+		\changefont{phv}{m}{n}    % helvetica
+		\begin{textblock}{10}[0,0](5.5,2.2)
+			\begin{flushright}
+				\Large Naturwissenschaftlich Technische Fakultät \\
+				\Large Department Physik\\\thesisinstitute
+			\end{flushright}
+		\end{textblock}
+		
+		% horizontal line
+		\begin{textblock}{10}[0,0](4.2,3.1)
+			\begin{tikzpicture}[overlay]
+			\draw[color=gray]
+			(\xone mm + 5 mm, -12 mm)
+			-- (\xtwo mm + \diameter pt - 5 mm, -12 mm);
+			\end{tikzpicture}
+		\end{textblock}
+		
+		% begin of text part
+		\changefont{phv}{m}{n}    % helvetica
+		\centering
+		
+		% thesis topic (en and ge)
+		\vspace*{3cm}
+		\Huge\thesistopic\\
+		%\huge(\thesisentopic)\\
+		
+		% author name and institute
+		\vspace*{2cm}
+		\huge Masterarbeit \\
+		\Large zur Erlangung des akademischen Grades\\Master of Science\\
+		\vspace*{1cm}
+		\large vorgelegt von \\
+		\vspace*{0.5cm}
+		\huge\thesisauthor\\
+		\vspace*{1cm}
+		\Large am \thesisinstitute
+		
+		% possible frontimage - thanks to JabberWok
+		% for publishing the img under GNU Document License
+		\vspace*{0cm}
+		\includegraphics[scale=0.9]{grouplogo.png} \\
+		
+		% working time
+		\vspace{1cm}
+		\begin{center}
+			% \large{{Bearbeitungszeit}: \thesistimestart \hspace*{0.25cm} -- %
+			%                           \hspace*{0.25cm} \thesistimeend}
+			im Januar 2021   
+		\end{center}
+		
+		% examiners (Referenten)
+		\vspace*{1cm}
+		\Large
+		\begin{center}
+			\begin{tabular}[ht]{l c l}
+				\iflanguage{english}{Erstgutachter}{Referent}: 
+				& \hfill & \thesisreviewerone\\
+				% uncomment if you want to provide info on your advisors
+				\iflanguage{english}{Zweitgutachter}{Korreferent}: 
+				& \hfill & \thesisreviewertwo\\
+				\iflanguage{english}{Betreuer}{Betreuender Mitarbeiter}: 
+				& \hfill & \thesisadvisorone \\   
+				% \iflanguage{english}{Second Advisor}{Zweiter betreuender Mitarbeiter}: 
+			\end{tabular}
+		\end{center}
+		
+	\end{titlepage}
+	
+\end{document}

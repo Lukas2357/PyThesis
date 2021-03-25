@@ -1,0 +1,37 @@
+\documentclass[../../main.tex]{subfiles}
+
+\makeatletter
+\def\l@chapter#1#2{\pagebreak[3]
+	\vskip 0.75em plus 1pt
+	\@tempdima 1.5em
+	\begingroup
+	\parindent \z@ \rightskip \@pnumwidth
+	\parfillskip -\@pnumwidth
+	\bfseries
+	\leavevmode
+	#1\hfil \hbox to\@pnumwidth{\hss #2}\medskip\par
+	\endgroup}
+\def\l@section{\vskip 0.2em plus 1pt \@dottedtocline{1}{0.5em}{2.3em}}
+\makeatother
+
+\begin{document}
+
+\FrontMatter
+
+\chapter*{Abstract}
+This work...
+
+\begingroup 
+	\hypersetup{colorlinks, citecolor=black, linkcolor=black, urlcolor=black}
+	\let\cleardoublepage\clearpage
+	\newpage
+	\listoffigures
+	\newpage
+	\listoftables
+	\newpage
+	\tableofcontents
+\endgroup
+
+\MainMatter
+
+\end{document}

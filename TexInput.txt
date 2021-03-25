@@ -1,0 +1,30 @@
+\documentclass[12pt]{scrartcl}
+
+%--------------------------------------------------------------------------------------------
+
+\usepackage [utf8]{inputenc}				%Standartformatierung
+\usepackage [T1]{fontenc}					%Standartformatierung
+\usepackage [english]{babel}				%Deutsche Rechtschreibung
+\usepackage {hyperref}						%Internetlink
+\usepackage [usenames,dvipsnames]{xcolor}	%farbige Texte 
+
+%--------------------------------------------------------------------------------------------
+
+\begin{document}
+	
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\Part}[3]{\begin{tabular}{|p{2.5cm}|p{12.5cm}|} \hline
+\multicolumn{2}{|c|}{\textbf{#2}} \\ \hline 
+#3 %Include as many sections as you like here
+\end{tabular} \textcolor{white}{...} \\ \\ \\}
+
+\newcommand{\Section}[5]{
+\vspace{0.01pt} \textbf{Section:} & \vspace{0.01pt} #1 \\ 
+\vspace{0.01pt} \textbf{Contents:} & \vspace{0.01pt} #2 \\
+\vspace{0.01pt} \textbf{Documents:} & \vspace{0.01pt} #3 \\ 
+\vspace{0.01pt} \textbf{Folder:} & \vspace{0.01pt} \textit{#4} \\ 
+\vspace{0.01pt} \textbf{Remarks:} & \vspace{0.01pt} #5 \\ \hline}
+
+%--------------------------------------------------------------------------------------------
+
