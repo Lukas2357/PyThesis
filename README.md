@@ -1,4 +1,4 @@
-# Python Thesis helper
+# Python Thesis Helper
 
 This python application helps by creating a scientific thesis with LaTeX. It creates a folder structure used to store the different TeX files for the chapters and other data files as well as backups and a lot more. It comes with some TeX files that are put together by the program to create some initial files. It also has the ability to create overview files and file archives for backups.
 
