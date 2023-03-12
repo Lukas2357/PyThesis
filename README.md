@@ -4,4 +4,4 @@ This python application helps by creating a scientific thesis with LaTeX. It cre
 
 At the core of the tool is a compiler file used to compile TeX files externally without opening anything like TeXMaker or TeXStudio. This was taken from the web and the rest of the tool was build around it.
 
-In order to use this tool, run the script ThesisHelp.py with a standard Python 3 interpreter. There will be explanations of what is going on. 
+In order to use this tool, run the script [ThesisHelp.py](ThesisHelp.py) with a standard Python 3 interpreter. There will be explanations of what is going on. 
